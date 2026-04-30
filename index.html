@@ -29,7 +29,6 @@ body {
     transition: 0.3s;
 }
 
-/* NAV */
 nav {
     position: fixed;
     width: 100%;
@@ -47,7 +46,6 @@ nav a {
     text-decoration: none;
 }
 
-/* HERO */
 .hero {
     height: 100vh;
     display: flex;
@@ -55,7 +53,6 @@ nav a {
     justify-content: center;
     align-items: center;
     text-align: center;
-
     background: linear-gradient(120deg, #1e293b, #020617);
 }
 
@@ -63,7 +60,6 @@ nav a {
     color: var(--accent);
 }
 
-/* BUTTON */
 .btn {
     padding: 12px 25px;
     background: var(--accent);
@@ -73,7 +69,6 @@ nav a {
     margin-top: 15px;
 }
 
-/* SECTION */
 section {
     padding: 80px 20px;
     max-width: 1000px;
@@ -84,14 +79,12 @@ h2 {
     text-align: center;
 }
 
-/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-/* CARD */
 .card {
     background: var(--card);
     backdrop-filter: blur(10px);
@@ -104,14 +97,12 @@ h2 {
     transform: translateY(-6px);
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
     opacity: 0.6;
 }
 
-/* TOGGLE */
 .toggle {
     position: fixed;
     top: 15px;
@@ -129,12 +120,13 @@ footer {
 <a href="#home">Home</a>
 <a href="#projects">Projects</a>
 <a href="#about">About</a>
+<a href="#courses">Courses</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <section class="hero" id="home">
 <h1>Hi, I'm <span>Bhavyadeep Arya</span></h1>
-<p>Aspiring [Your Field], building impactful solutions.</p>
+<p>Aspiring Computer Science student building impactful solutions.</p>
 <button class="btn" onclick="scrollToSection('projects')">View My Work</button>
 </section>
 
@@ -144,30 +136,80 @@ footer {
 
 <div class="card">
 <h3>AI Project</h3>
-<p>Built a model solving real-world problem.</p>
+<p>Built a machine learning model to solve a real-world problem using data-driven insights.</p>
 <a href="#">GitHub</a>
 </div>
 
 <div class="card">
 <h3>Web App</h3>
-<p>Created a responsive web solution.</p>
+<p>Developed a responsive web application focused on usability and real-world functionality.</p>
 <a href="#">Live Demo</a>
 </div>
 
 </div>
 </section>
 
+<!-- UPDATED ABOUT -->
 <section id="about">
 <h2>🧠 About Me</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>📚 Academic</h3>
 <p>
-I am a student with a strong interest in technology and problem-solving, driven by curiosity about how systems work and how they can be improved. My interest in this field developed as I began exploring concepts beyond the classroom and applying them through hands-on projects.
+I am a CBSE science student with a strong interest in analytical subjects, particularly those involving logical reasoning and problem-solving. I focus on building a solid understanding of core concepts while exploring how they apply beyond the classroom.
 
-Over time, I have worked on building projects that combine logical thinking, data, and real-world application, which has helped me develop both technical skills and a deeper understanding of practical problem-solving. I enjoy breaking down complex problems and designing solutions that are both efficient and meaningful.
-
-Looking ahead, I aim to pursue further studies in this field and continue building solutions that have a real-world impact, while constantly learning and pushing my boundaries.
+My academic journey is driven by curiosity and a desire to go deeper into areas related to technology and systems.
 </p>
+</div>
+
+<div class="card">
+<h3>⚡ Extracurricular</h3>
+<p>
+Beyond academics, I actively explore opportunities through projects and self-driven learning. I enjoy building and experimenting with ideas that solve real-world problems.
+
+These experiences have strengthened my ability to take initiative, learn independently, and approach challenges with a problem-solving mindset.
+</p>
+</div>
+
+</div>
 
 <button class="btn">Download Resume</button>
+</section>
+
+<!-- NEW COURSES SECTION -->
+<section id="courses">
+<h2>🎓 Courses & Programs</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>IIT Guwahati</h3>
+<p>Participated in an advanced learning program focused on technical concepts and applications.</p>
+</div>
+
+<div class="card">
+<h3>IIT Hyderabad</h3>
+<p>Explored analytical problem-solving and technical foundations through a structured program.</p>
+</div>
+
+<div class="card">
+<h3>Harvard Business School</h3>
+<p>Completed an online program covering business fundamentals and decision-making strategies.</p>
+</div>
+
+<div class="card">
+<h3>NUS (National University of Singapore)</h3>
+<p>Engaged in an international program with global academic exposure.</p>
+</div>
+
+<div class="card">
+<h3>MMGEIS</h3>
+<p>Participated in a structured learning experience focused on skill development and innovation.</p>
+</div>
+
+</div>
 </section>
 
 <section id="contact">
