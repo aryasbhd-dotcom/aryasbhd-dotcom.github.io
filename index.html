@@ -1,12 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bhavyadeep Arya</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Name | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
 <style>
 :root {
     --bg: #0f172a;
@@ -29,6 +28,7 @@ body {
     transition: 0.3s;
 }
 
+/* NAV */
 nav {
     position: fixed;
     width: 100%;
@@ -46,6 +46,7 @@ nav a {
     text-decoration: none;
 }
 
+/* HERO */
 .hero {
     height: 100vh;
     display: flex;
@@ -53,6 +54,7 @@ nav a {
     justify-content: center;
     align-items: center;
     text-align: center;
+
     background: linear-gradient(120deg, #1e293b, #020617);
 }
 
@@ -60,6 +62,7 @@ nav a {
     color: var(--accent);
 }
 
+/* BUTTON */
 .btn {
     padding: 12px 25px;
     background: var(--accent);
@@ -69,6 +72,7 @@ nav a {
     margin-top: 15px;
 }
 
+/* SECTION */
 section {
     padding: 80px 20px;
     max-width: 1000px;
@@ -79,12 +83,14 @@ h2 {
     text-align: center;
 }
 
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
+/* CARD */
 .card {
     background: var(--card);
     backdrop-filter: blur(10px);
@@ -97,12 +103,14 @@ h2 {
     transform: translateY(-6px);
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
     opacity: 0.6;
 }
 
+/* TOGGLE */
 .toggle {
     position: fixed;
     top: 15px;
@@ -111,117 +119,179 @@ footer {
 }
 </style>
 </head>
-
 <body>
-
 <div class="toggle" onclick="toggleMode()">🌙</div>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#projects">Projects</a>
-<a href="#about">About</a>
-<a href="#courses">Courses</a>
-<a href="#contact">Contact</a>
-</nav>
-
+<nav><a href="#home">Home</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
 <section class="hero" id="home">
 <h1>Hi, I'm <span>Bhavyadeep Arya</span></h1>
-<p>Aspiring Computer Science student building impactful solutions.</p>
-<button class="btn" onclick="scrollToSection('projects')">View My Work</button>
+<p>Aspiring Computer Scientist | Exploring Technology, Innovation &amp; Engineering</p>
+<button class="btn" onclick="scrollToSection('about')">Explore My Journey</button>
 </section>
 
-<section id="projects">
-<h2>🚀 Projects</h2>
-<div class="grid">
-
-<div class="card">
-<h3>AI Project</h3>
-<p>Built a machine learning model to solve a real-world problem using data-driven insights.</p>
-<a href="#">GitHub</a>
-</div>
-
-<div class="card">
-<h3>Web App</h3>
-<p>Developed a responsive web application focused on usability and real-world functionality.</p>
-<a href="#">Live Demo</a>
-</div>
-
-</div>
-</section>
-
-<!-- UPDATED ABOUT -->
 <section id="about">
-<h2>🧠 About Me</h2>
 
-<div class="grid">
+<h2>🧠 About My Journey</h2>
 
-<div class="card">
+<!-- Academic -->
+
+<div class="card" style="margin-bottom:30px;">
+
 <h3>📚 Academic</h3>
+
 <p>
-I am a CBSE science student with a strong interest in analytical subjects, particularly those involving logical reasoning and problem-solving. I focus on building a solid understanding of core concepts while exploring how they apply beyond the classroom.
-
-My academic journey is driven by curiosity and a desire to go deeper into areas related to technology and systems.
+I am a CBSE Science student with a strong passion for Computer Science, and Mathematics. I enjoy exploring concepts beyond the classroom through independent learning and challenging academic opportunities. My curiosity drives me to continuously expand my knowledge and develop the analytical and problem-solving skills needed to tackle real-world challenges. I aspire to pursue higher education at a leading university and contribute towards developing innovative technologies that create meaningful impact.
 </p>
-</div>
 
-<div class="card">
-<h3>⚡ Extracurricular</h3>
+<hr style="margin:20px 0; border:0; border-top:1px solid rgba(255,255,255,0.15);">
+
+<h4>📄 CBSE Class XI Academic Record</h4>
+
 <p>
-Beyond academics, I actively explore opportunities through projects and self-driven learning. I enjoy building and experimenting with ideas that solve real-world problems.
-
-These experiences have strengthened my ability to take initiative, learn independently, and approach challenges with a problem-solving mindset.
+Successfully completed Class XI under the CBSE curriculum with a strong academic performance, demonstrating consistency across Mathematics, Physics, Chemistry, and Computer Science.
 </p>
+
+<a href="certificates/Class11_Marksheet.pdf" target="_blank">
+📄 View Official Marksheet →
+</a>
+
+<br><br>
+<hr style="margin:20px 0; border:0; border-top:1px solid rgba(255,255,255,0.15);">
+
+<h4>🌍 SAT</h4>
+
+<p>
+Completed the SAT as part of my preparation for applications to leading international universities. The examination assessed my proficiency in evidence-based reading, writing, and mathematics, serving as a standardized measure of academic readiness for undergraduate study.
+</p>
+
+<a href="certificates/SAT_Score_Report.pdf" target="_blank">
+📄 View Official SAT Score Report →
+</a>
 </div>
 
-</div>
 
-<button class="btn">Download Resume</button>
-</section>
+<!-- Co-Curricular -->
 
-<!-- NEW COURSES SECTION -->
-<section id="courses">
-<h2>🎓 Courses & Programs</h2>
+<div class="card" style="margin-bottom:30px;">
 
-<div class="grid">
+<h3>🎓 Co-Curricular</h3>
 
-<div class="card">
+<p>
+Throughout my academic journey, I have actively participated in programmes offered by leading universities and institutions. These experiences have provided me with exposure to advanced concepts, global perspectives, and learning opportunities beyond the traditional school curriculum.
+</p>
+
+<br>
+
+<div class="card" style="margin-bottom:20px;">
 <h3>IIT Guwahati</h3>
-<p>Participated in an advanced learning program focused on technical concepts and applications.</p>
+
+<p>
+Successfully completed an academic enrichment programme conducted by IIT Guwahati, gaining exposure to advanced concepts beyond the classroom while strengthening analytical thinking and problem-solving skills.
+</p>
+
+<a href="certificates/iitg.pdf" target="_blank">
+📜 View Certificate →
+</a>
+
 </div>
 
-<div class="card">
+<div class="card" style="margin-bottom:20px;">
 <h3>IIT Hyderabad</h3>
-<p>Explored analytical problem-solving and technical foundations through a structured program.</p>
+
+<p>
+Participated in a specialised programme organised by IIT Hyderabad, exploring engineering concepts through interactive learning and practical applications while enhancing technical understanding.
+</p>
+
+<a href="certificates/iith.pdf" target="_blank">
+📜 View Certificate →
+</a>
+
 </div>
 
-<div class="card">
+<div class="card" style="margin-bottom:20px;">
 <h3>Harvard Business School</h3>
-<p>Completed an online program covering business fundamentals and decision-making strategies.</p>
+
+<p>
+Completed an online programme from Harvard Business School, developing an understanding of business fundamentals, leadership, strategic thinking, and decision-making.
+</p>
+
+<a href="certificates/harvard.pdf" target="_blank">
+📜 View Certificate →
+</a>
+
 </div>
 
-<div class="card">
-<h3>NUS (National University of Singapore)</h3>
-<p>Engaged in an international program with global academic exposure.</p>
+<div class="card" style="margin-bottom:20px;">
+<h3>National University of Singapore</h3>
+
+<p>
+Participated in an international academic programme conducted by the National University of Singapore, gaining global exposure while exploring interdisciplinary learning and innovation.
+</p>
+
+<a href="certificates/nus.pdf" target="_blank">
+📜 View Certificate →
+</a>
+
 </div>
 
 <div class="card">
 <h3>MMGEIS</h3>
-<p>Participated in a structured learning experience focused on skill development and innovation.</p>
+
+<p>
+Successfully completed the MMGEIS programme, enhancing critical thinking, collaboration, and practical problem-solving through structured learning experiences.
+</p>
+
+<a href="certificates/mmgeis.pdf" target="_blank">
+📜 View Certificate →
+</a>
+
+</div>
+
+</div>
+
+
+<!-- Extra-Curricular -->
+
+<div class="card">
+
+<h3>🏀 Extra-Curricular</h3>
+
+<p>
+Beyond academics, I actively pursue activities that foster discipline, teamwork, leadership, creativity, and resilience. These experiences complement my academic growth and contribute to my development as a well-rounded individual.
+</p>
+
+<br>
+
+<div class="card" style="margin-bottom:20px;">
+<h3>🏀 Basketball</h3>
+
+<p>
+Basketball has played a significant role in strengthening my teamwork, communication, leadership, resilience, and decision-making abilities. The sport has taught me the importance of discipline, perseverance, and performing effectively under pressure.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🥁 Trinity College London – Grade 1 Drum Kit</h3>
+
+<p>
+Successfully completed the Grade 1 Drum Kit examination conducted by Trinity College London, developing rhythm, coordination, technical proficiency, and musical discipline through structured practical assessment.
+</p>
+
+<a href="certificates/trinity.pdf" target="_blank">
+📜 View Certificate →
+</a>
+
 </div>
 
 </div>
+
 </section>
 
-<section id="contact">
-<h2>📫 Contact</h2>
-<p>Email: aryasbhd@gmail.com</p>
-<p>Mobile No: 9989651150</p>
-</section>
-
+<section id="contact"><h2>📫 Contact</h2><p>📧 Email: your@email.com</p><p>📞 Phone: +91 XXXXXXXXXX</p><p>🌐 Website: bhavyadeeparya.com</p></section>
 <footer>
-<p>© 2026 Bhavyadeep Arya</p>
+<p>© 2026 Your Name</p>
 </footer>
-
 <script>
 function scrollToSection(id){
 document.getElementById(id).scrollIntoView({behavior:'smooth'});
@@ -231,6 +301,5 @@ function toggleMode(){
 document.body.classList.toggle("light-mode");
 }
 </script>
-
 </body>
 </html>
