@@ -10,27 +10,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;500;600;700&display=swap');
 
 :root {
-    --bg: #07080a;
-    --bg-secondary: #0c0e12;
-    --card: rgba(17, 19, 24, 0.78);
-    --card-hover: rgba(22, 25, 32, 0.92);
-    --text: #f4f4f5;
-    --muted: #a1a1aa;
-    --accent: #38bdf8;
-    --accent-secondary: #818cf8;
-    --border: rgba(255,255,255,0.08);
+    --bg: #050505;
+    --bg-secondary: #0b0b0b;
+    --card: rgba(20,20,20,0.82);
+    --card-hover: rgba(28,28,28,0.95);
+    --text: #f5f5f5;
+    --muted: #a3a3a3;
+    --accent: #d4d4d8;
+    --accent-bright: #ffffff;
+    --border: rgba(255,255,255,0.10);
 }
 
 .light-mode {
-    --bg: #f7f8fa;
-    --bg-secondary: #eef0f4;
+    --bg: #f4f4f5;
+    --bg-secondary: #e4e4e7;
     --card: rgba(255,255,255,0.78);
     --card-hover: rgba(255,255,255,0.95);
     --text: #18181b;
     --muted: #71717a;
-    --accent: #0284c7;
-    --accent-secondary: #6366f1;
-    --border: rgba(0,0,0,0.08);
+    --accent: #52525b;
+    --accent-bright: #18181b;
+    --border: rgba(0,0,0,0.10);
 }
 
 * {
@@ -45,27 +45,27 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background:
-        radial-gradient(circle at 15% 15%, rgba(56,189,248,0.07), transparent 28%),
-        radial-gradient(circle at 85% 25%, rgba(129,140,248,0.07), transparent 28%),
-        radial-gradient(circle at 50% 90%, rgba(56,189,248,0.04), transparent 35%),
+        radial-gradient(circle at 50% 0%, rgba(255,255,255,0.045), transparent 30%),
+        radial-gradient(circle at 10% 50%, rgba(255,255,255,0.018), transparent 25%),
+        radial-gradient(circle at 90% 70%, rgba(255,255,255,0.018), transparent 25%),
         var(--bg);
     color: var(--text);
     transition: 0.3s;
     min-height: 100vh;
 }
 
-/* SUBTLE GRID BACKGROUND */
+/* SUBTLE PREMIUM GRID */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: -1;
-    opacity: 0.22;
+    opacity: 0.18;
     background-image:
         linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-    background-size: 60px 60px;
+    background-size: 70px 70px;
 }
 
 /* NAV */
@@ -78,21 +78,25 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    background: rgba(12,14,18,0.72);
-    border: 1px solid var(--border);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    background: rgba(10,10,10,0.78);
+    border: 1px solid rgba(255,255,255,0.10);
     border-radius: 999px;
+
     padding: 11px 18px;
     z-index: 1000;
+
     box-shadow:
-        0 10px 35px rgba(0,0,0,0.25),
-        inset 0 1px 0 rgba(255,255,255,0.04);
+        0 10px 35px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
 nav a {
     margin: 0 15px;
-    color: var(--muted);
+    color: #a3a3a3;
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
@@ -100,7 +104,7 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--text);
+    color: #ffffff;
 }
 
 /* TOGGLE */
@@ -110,92 +114,171 @@ nav a:hover {
     right: 25px;
     cursor: pointer;
     z-index: 1100;
+
     width: 38px;
     height: 38px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     border-radius: 50%;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid var(--border);
-    backdrop-filter: blur(12px);
+
+    background: rgba(255,255,255,0.055);
+    border: 1px solid rgba(255,255,255,0.10);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
 /* HERO */
 .hero {
     height: 100vh;
     min-height: 700px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
+
     position: relative;
     overflow: hidden;
 
     background:
-        radial-gradient(circle at 50% 45%, rgba(56,189,248,0.12), transparent 25%),
-        radial-gradient(circle at 50% 45%, rgba(129,140,248,0.08), transparent 45%),
+        radial-gradient(
+            circle at 50% 43%,
+            rgba(255,255,255,0.09),
+            transparent 23%
+        ),
+        radial-gradient(
+            circle at 50% 43%,
+            rgba(255,255,255,0.035),
+            transparent 45%
+        ),
         transparent;
 }
 
-/* HERO GLOW */
+/* HERO LIGHT */
 .hero::before {
     content: "";
+
     position: absolute;
+
     width: 650px;
     height: 650px;
+
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(56,189,248,0.08), transparent 65%);
-    filter: blur(20px);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.08),
+            transparent 65%
+        );
+
+    filter: blur(25px);
+
     pointer-events: none;
 }
 
+/* HERO TITLE */
 .hero h1 {
     font-family: 'Poppins', sans-serif;
+
     font-size: clamp(42px, 6vw, 76px);
+
     line-height: 1.05;
+
     letter-spacing: -3px;
+
     margin: 0 0 20px;
+
     position: relative;
 }
 
 .hero h1 span {
-    color: var(--accent);
-    text-shadow: 0 0 35px rgba(56,189,248,0.25);
+    background:
+        linear-gradient(
+            120deg,
+            #ffffff 0%,
+            #d4d4d8 35%,
+            #8f8f94 55%,
+            #ffffff 75%,
+            #b5b5b8 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    text-shadow:
+        0 0 35px rgba(255,255,255,0.12);
 }
 
 .hero p {
     max-width: 650px;
+
     color: var(--muted);
+
     font-size: 17px;
+
     line-height: 1.7;
+
     position: relative;
 }
 
 /* BUTTON */
 .btn {
     padding: 13px 27px;
-    background: var(--text);
-    color: var(--bg);
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #cfcfd2
+        );
+
+    color: #080808;
+
     border: none;
+
     border-radius: 9px;
+
     cursor: pointer;
+
     margin-top: 22px;
+
     font-weight: 600;
+
     font-size: 14px;
+
     position: relative;
+
     transition: 0.3s;
+
     box-shadow:
-        0 0 0 1px rgba(255,255,255,0.08),
-        0 10px 30px rgba(0,0,0,0.25);
+        0 0 0 1px rgba(255,255,255,0.15),
+        0 12px 35px rgba(0,0,0,0.45);
 }
 
 .btn:hover {
     transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #eeeeee
+        );
+
     box-shadow:
-        0 0 25px rgba(56,189,248,0.18),
-        0 15px 35px rgba(0,0,0,0.3);
+        0 0 30px rgba(255,255,255,0.12),
+        0 16px 40px rgba(0,0,0,0.55);
 }
 
 /* SECTION */
@@ -207,10 +290,25 @@ section {
 
 h2 {
     text-align: center;
+
     font-family: 'Poppins', sans-serif;
+
     font-size: 34px;
+
     letter-spacing: -1px;
+
     margin-bottom: 45px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #ffffff,
+            #bdbdc1
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 h3 {
@@ -224,7 +322,10 @@ h4 {
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
     gap: 20px;
 }
 
@@ -234,7 +335,7 @@ h4 {
         linear-gradient(
             145deg,
             rgba(255,255,255,0.045),
-            rgba(255,255,255,0.015)
+            rgba(255,255,255,0.012)
         ),
         var(--card);
 
@@ -242,12 +343,14 @@ h4 {
     -webkit-backdrop-filter: blur(18px);
 
     border: 1px solid var(--border);
+
     padding: 25px;
+
     border-radius: 16px;
 
     box-shadow:
-        0 15px 45px rgba(0,0,0,0.18),
-        inset 0 1px 0 rgba(255,255,255,0.035);
+        0 18px 50px rgba(0,0,0,0.28),
+        inset 0 1px 0 rgba(255,255,255,0.045);
 
     transition:
         transform 0.3s ease,
@@ -258,28 +361,42 @@ h4 {
 
 .card:hover {
     transform: translateY(-6px);
-    background: var(--card-hover);
-    border-color: rgba(56,189,248,0.22);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.065),
+            rgba(255,255,255,0.018)
+        ),
+        var(--card-hover);
+
+    border-color:
+        rgba(255,255,255,0.18);
+
     box-shadow:
-        0 20px 55px rgba(0,0,0,0.28),
-        0 0 30px rgba(56,189,248,0.04),
-        inset 0 1px 0 rgba(255,255,255,0.05);
+        0 25px 65px rgba(0,0,0,0.40),
+        0 0 35px rgba(255,255,255,0.025),
+        inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
 .card p {
     color: var(--muted);
+
     line-height: 1.75;
 }
 
 .card a {
-    color: var(--accent);
+    color: #d4d4d8;
+
     text-decoration: none;
+
     font-weight: 500;
+
     transition: 0.25s;
 }
 
 .card a:hover {
-    color: var(--text);
+    color: #ffffff;
 }
 
 /* DIVIDERS */
@@ -290,14 +407,19 @@ hr {
 /* FOOTER */
 footer {
     text-align: center;
+
     padding: 30px;
+
     color: var(--muted);
+
     opacity: 0.7;
+
     border-top: 1px solid var(--border);
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
+
     nav {
         top: 10px;
         padding: 9px 12px;
@@ -327,7 +449,6 @@ footer {
     }
 }
 </style>
-
 
 </head>
 <body>
@@ -372,7 +493,7 @@ Successfully completed Class XI under the CBSE curriculum with a strong academic
 <h4>📄 CBSE Class X Academic Record</h4>
 
 <p>
-Successfully completed Class X under the CBSE curriculum, establishing a strong academic foundation across core subjects and providing the foundation for my senior secondary education in the Science stream.
+Achieved an overall score of **92% in the CBSE Class X Board Examinations**, demonstrating a strong academic foundation across core subjects. Secured the distinction of **School Topper in Mathematics**, reflecting strong quantitative ability, analytical thinking, and problem-solving skills.
 </p>
 
 <a href="certificates/Class10_Marksheet.jpg" target="_blank">
@@ -386,7 +507,7 @@ Successfully completed Class X under the CBSE curriculum, establishing a strong 
 <h4>🌍 SAT</h4>
 
 <p>
-Achieved a 1260/1600 on the SAT, demonstrating strong proficiency in quantitative reasoning and evidence-based reading and writing. The score meets the College Board's college and career readiness benchmarks, reflecting a solid academic foundation for higher education.
+Scored 1260/1600 on the SAT and am currently preparing to retake the examination with the goal of achieving a significantly improved score. While the result provided a solid foundation, I was not satisfied with my performance and am committed to strengthening my quantitative reasoning and evidence-based reading and writing skills through continued preparation.
 </p>
 
 <a href="certificates/SAT_Score_Report.jpg" target="_blank">
@@ -499,7 +620,7 @@ Basketball has been instrumental in developing my discipline, leadership, and co
 <h3>🥁 Trinity College London – Grade 1 Drum Kit</h3>
 
 <p>
-Initiated my graded musical education with Trinity College London, developing technical proficiency, discipline, and creative expression through percussion. I have since advanced by completing Grade 1 Rock & Pop Drums and continue to pursue formal training in Classical Drums, demonstrating long-term dedication to the performing arts.
+Initiated my graded musical education with Trinity College London, developing technical proficiency, discipline, and creative expression through percussion. I have since advanced by completing Initial Grade and Grade 1 Rock & Pop Drums and continue to pursue formal training in Classical Drums for Grade 2, demonstrating long-term dedication to the performing arts.
 </p>
 
 <a href="certificates/Trinity.pdf" target="_blank">
