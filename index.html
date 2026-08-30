@@ -8,116 +8,120 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
 <style>
 :root {
-    --bg: #0f172a;
-    --card: rgba(255,255,255,0.05);
-    --text: #e2e8f0;
-    --accent: #38bdf8;
+    --bg: #120b1f;
+    --card: rgba(255,255,255,0.06);
+    --text: #eee7ff;
+    --accent: #a855f7;
 }
 
 .light-mode {
-    --bg: #f1f5f9;
-    --card: rgba(0,0,0,0.05);
-    --text: #0f172a;
+--bg: #f5f3ff;
+--card: rgba(0,0,0,0.05);
+--text: #1e1633;
+--accent: #7c3aed;
 }
 
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    transition: 0.3s;
+margin: 0;
+font-family: 'Poppins', sans-serif;
+background: var(--bg);
+color: var(--text);
+transition: 0.3s;
 }
 
 /* NAV */
 nav {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    backdrop-filter: blur(12px);
-    background: rgba(0,0,0,0.2);
-    padding: 15px;
-    z-index: 1000;
+position: fixed;
+width: 100%;
+display: flex;
+justify-content: center;
+backdrop-filter: blur(12px);
+background: rgba(20,10,35,0.35);
+padding: 15px;
+z-index: 1000;
 }
 
 nav a {
-    margin: 0 15px;
-    color: var(--text);
-    text-decoration: none;
+margin: 0 15px;
+color: var(--text);
+text-decoration: none;
 }
 
 /* HERO */
 .hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
 
-    background: linear-gradient(120deg, #1e293b, #020617);
+```
+background: linear-gradient(120deg, #24113f, #0b0614);
+```
+
 }
 
 .hero h1 span {
-    color: var(--accent);
+color: var(--accent);
 }
 
 /* BUTTON */
 .btn {
-    padding: 12px 25px;
-    background: var(--accent);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 15px;
+padding: 12px 25px;
+background: var(--accent);
+border: none;
+border-radius: 8px;
+cursor: pointer;
+margin-top: 15px;
 }
 
 /* SECTION */
 section {
-    padding: 80px 20px;
-    max-width: 1000px;
-    margin: auto;
+padding: 80px 20px;
+max-width: 1000px;
+margin: auto;
 }
 
 h2 {
-    text-align: center;
+text-align: center;
 }
 
 /* GRID */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
 }
 
 /* CARD */
 .card {
-    background: var(--card);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 12px;
-    transition: 0.3s;
+background: var(--card);
+backdrop-filter: blur(10px);
+padding: 20px;
+border-radius: 12px;
+transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-6px);
+transform: translateY(-6px);
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
-    opacity: 0.6;
+text-align: center;
+padding: 20px;
+opacity: 0.6;
 }
 
 /* TOGGLE */
 .toggle {
-    position: fixed;
-    top: 15px;
-    right: 20px;
-    cursor: pointer;
-}
-</style>
+position: fixed;
+top: 15px;
+right: 20px;
+cursor: pointer;
+} </style>
+
 </head>
 <body>
 <div class="toggle" onclick="toggleMode()">🌙</div>
@@ -155,6 +159,21 @@ Successfully completed Class XI under the CBSE curriculum with a strong academic
 </a>
 
 <br><br>
+
+<hr style="margin:20px 0; border:0; border-top:1px solid rgba(255,255,255,0.15);">
+
+<h4>📄 CBSE Class X Academic Record</h4>
+
+<p>
+Successfully completed Class X under the CBSE curriculum, establishing a strong academic foundation across core subjects and providing the foundation for my senior secondary education in the Science stream.
+</p>
+
+<a href="certificates/Class10_Marksheet.jpg" target="_blank">
+📄 View Official Marksheet →
+</a>
+
+<br><br>
+
 <hr style="margin:20px 0; border:0; border-top:1px solid rgba(255,255,255,0.15);">
 
 <h4>🌍 SAT</h4>
@@ -167,7 +186,6 @@ Achieved a 1260/1600 on the SAT, demonstrating strong proficiency in quantitativ
 📄 View Official SAT Score Report →
 </a>
 </div>
-
 
 <!-- Co-Curricular -->
 
@@ -248,7 +266,6 @@ Attended an expert-led session on Advances in Geospatial Technology and Applicat
 
 </div>
 
-
 <!-- Extra-Curricular -->
 
 <div class="card">
@@ -279,7 +296,13 @@ Initiated my graded musical education with Trinity College London, developing te
 </p>
 
 <a href="certificates/Trinity.pdf" target="_blank">
-📜 View Certificate →
+📜 View Grade 1 Certificate →
+</a>
+
+<br><br>
+
+<a href="certificates/Trinity_Grade2_Marksheet.pdf" target="_blank">
+📄 View Grade 2 Marksheet →
 </a>
 
 </div>
@@ -299,7 +322,7 @@ document.getElementById(id).scrollIntoView({behavior:'smooth'});
 
 function toggleMode(){
 document.body.classList.toggle("light-mode");
-}
-</script>
+} </script>
+
 </body>
 </html>
